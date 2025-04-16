@@ -1,0 +1,97 @@
+export const product = [
+  // Women Products
+  {
+    id: 1,
+    name: "Modern Habsha",
+    price: 8900,
+    description:
+      "A fresh take on timeless beauty—this modern Habesha Kemis blends tradition with contemporary cuts.",
+    sizes: ["S", "M", "L", "XL"],
+    rating: 4.1,
+    reviewCount: 131,
+    images: ["/image/women-1.jpg"],
+    features: [
+      "Made from 100% cotton",
+      "Features handwoven Tibeb",
+      "Adjustable fit",
+      "Machine washable",
+    ],
+  },
+  {
+    id: 2,
+    name: "Classic Abaya",
+    price: 7200,
+    description: "Elegant black abaya with gold embroidery, perfect for formal occasions.",
+    sizes: ["S", "M", "L"],
+    rating: 4.5,
+    reviewCount: 98,
+    images: ["/image/women-2.jpg"],
+    features: [
+      "Premium chiffon",
+      "Gold detailing",
+      "Lightweight & breathable",
+    ],
+  },
+
+  // Men Products
+  {
+    id: 3,
+    name: "Modern Ethiopian Suit",
+    price: 9500,
+    description: "Modern tailored suit with traditional Ethiopian touches for stylish gents.",
+    sizes: ["M", "L", "XL"],
+    rating: 4.7,
+    reviewCount: 72,
+    images: ["/image/men-1.jpg"],
+    features: [
+      "Blazer and pants combo",
+      "Premium fit",
+      "Embroidered collar",
+    ],
+  },
+  {
+    id: 4,
+    name: "White Traditional Shirt",
+    price: 4200,
+    description: "Classic Ethiopian white shirt with handwoven borders on sleeves and collar.",
+    sizes: ["S", "M", "L", "XL"],
+    rating: 4.2,
+    reviewCount: 54,
+    images: ["../image/men-2.jpg"],
+    features: [
+      "100% cotton",
+      "Traditional tibeb patterns",
+      "Lightweight",
+    ],
+  },
+  {
+    id: 5,
+    name: "Embroidered Kaba",
+    price: 11000,
+    description: "Royal-style men's Kaba with rich embroidery and elegant drape.",
+    sizes: ["M", "L", "XL"],
+    rating: 4.8,
+    reviewCount: 87,
+    images: ["../image/men-3.jpg"],
+    features: [
+      "Detailed golden embroidery",
+      "Luxurious fabric",
+      "Includes belt",
+    ],
+  },
+  {
+    id: 6,
+    name: "Casual Linen Shirt",
+    price: 3800,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    rating: 4.0,
+    reviewCount: 39,
+    images: ["../image/men-4.jpg"],
+    features: [
+      "Linen blend",
+      "Soft collar",
+      "Subtle tibeb trim",
+    ],
+  },
+]
