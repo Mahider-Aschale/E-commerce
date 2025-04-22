@@ -1,7 +1,7 @@
 "use client"
 import { Link } from "react-router-dom"
 import ProductCard from "../compont/productCard"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs} from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import type { Product } from "../type"
 
@@ -11,35 +11,35 @@ const BestSellers = () => {
       name: "Modern habsha",
       price: 8900,
       image: "/image/women-1.jpg",
-      rating:4.1,
-      reviewCount: 521,
+      rating:4.7,
+      reviewCount: 131,
       category: "women",
     },
     {
       id: 2,
-      name: "custom habsha",
-      price: 9500,
+      name: "Classic Habsha",
+      price: 7200,
       image: "/image/women-2.jpg",
-      rating: 4.3,
-      reviewCount: 242,
+      rating: 4.5,
+      reviewCount: 98,
       category: "women",
     },
     {
-      id: 3,
-      name: "modern habsha",
-      price: 8500,
+      id: 5,
+      name: "Modern Ethiopian Suit",
+      price: 9500,
       image: "/image/men-1.jpg",
       rating: 4.7,
-      reviewCount: 364,
+      reviewCount: 72,
       category: "men",
     },
     {
-      id: 4,
-      name: "modern habsha",
+      id: 6,
+      name: "White Traditional Shirt",
       price: 6900,
       image: "/image/men-2.jpg",
-      rating: 4.9,
-      reviewCount: 322,
+      rating: 4.2,
+      reviewCount: 54,
       category: "men",
     
     },
@@ -51,10 +51,6 @@ const BestSellers = () => {
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-3xl font-bold text-blue-600">BESTSELLERS</h2>
           <Tabs defaultValue="for-you" className="w-auto">
-            <TabsList>
-              <TabsTrigger value="for-you">FOR YOU</TabsTrigger>
-              <TabsTrigger value="trending">TRENDING</TabsTrigger>
-            </TabsList>
             <div className="ml-4 inline-block">
               <Button variant="link" asChild>
                 <Link to="/products">SEE ALL</Link>

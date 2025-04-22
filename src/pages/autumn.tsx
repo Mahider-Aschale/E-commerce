@@ -8,87 +8,85 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import type { Product } from "../type"
 import { Link } from "react-router-dom"
-const ProductListPage = () => {
-  const [viewMode] = useState<"grid" | "list">("grid")
+const Autumn = () => {
+  const [viewMode] = useState("grid")
 
 
   // Mock products data
   const products: Product[] = [
-    {id: 1,
-      name: "Modern habsha",
-      price: 8900,
-      image: "/image/women-1.jpg",
-      rating:4.1,
-      reviewCount: 131,
+    {id: 9,
+      name: "golden habsha",
+      price: 5900,
+      image: "/image/autumn-w1.jpg",
+      rating:4.2,
+      reviewCount: 51,
       category: "women",
     },
 {
-      id: 2,
-      name: "Classic Abaya",
-      price: 7200,
-      image: "/image/women-2.jpg",
-      rating: 4.5,
-      reviewCount:98,
+      id: 10,
+      name: "golden addis",
+      price: 5200,
+      image: "/image/autumn-w2.jpg",
+      rating: 4.0,
+      reviewCount:28,
       category: "women",
     }, 
     {
-      id: 3,
-      name: "modern habsha",
-      price: 8500,
-      image: "/image/women-3.jpg",
-      rating: 4.2,
-      reviewCount: 342,
-      category: "women",
-    },
-    {
-      id: 4,
-      name: "modern habsha",
-      price: 6900,
-      image: "/image/women-4.jpg",
-      rating: 4.9,
-      reviewCount: 122,
-      category: "women",
-    },
-    {
-      id: 5,
-      name: "Modern Ethiopian Suit",
-      price: 9500,
-      image: "/image/men-1.jpg",
+      id: 11,
+      name: "gold habsha",
+      price: 6500,
+      image: "/image/autumn-w3.jpg",
       rating: 4.7,
-      reviewCount: 2,
-      category: "men",
+      reviewCount: 32,
+      category: "women",
     },
     {
-      id: 6,
-      name: "White Traditional Shirt",
-      price: 4200,
-      image: "/image/men-2.jpg",
-      rating: 4.2,
-      reviewCount: 54,
+      id: 12,
+      name: "auntum habsha",
+      price: 3900,
+      image: "/image/autumn-w4.jpg",
+      rating: 4.5,
+      reviewCount: 22,
+      category: "women",
+    },
+    {
+      id: 13,
+      name: "autumn ethiopian dress",
+      price: 5500,
+      image: "/image/autumn-w5.jpg",
+      rating: 4.7,
+      reviewCount: 32,
+      category: "women",
+    },
+    {
+      id:14,
+      name: "gold Traditional Shirt",
+      price: 3400,
+      image: "/image/autumn-m1.jpg",
+      rating: 4.0,
+      reviewCount: 84,
       category: "men",
     },
    
     {
-      id: 7,
-      name: "Embroidered habsha",
-      price: 11000,
-      image: "/image/men-3.jpg",
-      rating: 4.8,
-      reviewCount: 87,
+      id: 15,
+      name: "golden kaba",
+      price: 7000,
+      image: "/image/autumn-m2.jpg",
+      rating: 4.2,
+      reviewCount: 84,
       category: "men",
     },  
     {
-      id: 8,
-      name: "Casual Linen Shirt",
-      price: 7500,
-      image: "/image/men-4.jpg",
+      id: 16,
+      name: "Casual gold shirt",
+      price: 5500,
+      image: "/image/autumn-m3.jpg",
       rating: 4.0,
-      reviewCount: 39,
+      reviewCount: 29,
       category: "men",
     
-  }
-
-]
+  }]
 
   const FilterContent = () => (
     <div className="space-y-6">
@@ -99,20 +97,10 @@ const ProductListPage = () => {
           <Link to="/" className="font-medium text-gray-500">
               HOME
             </Link>
-            </div>
-            <div className="space-y-3">
-            <Link to="/men" className="font-medium text-gray-500">
-              MEN
-            </Link>
-            </div>
-            <div className="space-y-3">
-            <Link to="/women" className="font-medium text-gray-500">
-              WOMEN
-            </Link>
-           </div>
           </div>
-         </div>
-        </div>
+       </div>
+      </div>
+    </div>
   )
 
   return (
@@ -186,5 +174,5 @@ const ProductListPage = () => {
   )
 }
 
-export default ProductListPage
+export default Autumn
 

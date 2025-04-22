@@ -1,118 +1,72 @@
 "use client"
 
 import { useState } from "react"
-import { Filter}  from "lucide-react"
-import ProductCard from "../compont/productCard"
+import { Filter, Grid, List } from "lucide-react"
+import ProductCard from "./productCard"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import type { Product } from "../type"
 import { Link } from "react-router-dom"
-const ProductListPage = () => {
+const men= () => {
   const [viewMode] = useState<"grid" | "list">("grid")
 
 
   // Mock products data
   const products: Product[] = [
-    {id: 1,
-      name: "Modern habsha",
-      price: 8900,
-      image: "/image/women-1.jpg",
-      rating:4.1,
-      reviewCount: 131,
-      category: "women",
-    },
-{
-      id: 2,
-      name: "Classic Abaya",
-      price: 7200,
-      image: "/image/women-2.jpg",
-      rating: 4.5,
-      reviewCount:98,
-      category: "women",
-    }, 
-    {
-      id: 3,
-      name: "modern habsha",
-      price: 8500,
-      image: "/image/women-3.jpg",
-      rating: 4.2,
-      reviewCount: 342,
-      category: "women",
-    },
-    {
-      id: 4,
-      name: "modern habsha",
-      price: 6900,
-      image: "/image/women-4.jpg",
-      rating: 4.9,
-      reviewCount: 122,
-      category: "women",
-    },
-    {
-      id: 5,
-      name: "Modern Ethiopian Suit",
-      price: 9500,
-      image: "/image/men-1.jpg",
-      rating: 4.7,
-      reviewCount: 2,
-      category: "men",
-    },
-    {
-      id: 6,
-      name: "White Traditional Shirt",
-      price: 4200,
-      image: "/image/men-2.jpg",
-      rating: 4.2,
-      reviewCount: 54,
-      category: "men",
-    },
-   
-    {
-      id: 7,
-      name: "Embroidered habsha",
-      price: 11000,
-      image: "/image/men-3.jpg",
-      rating: 4.8,
-      reviewCount: 87,
-      category: "men",
-    },  
-    {
-      id: 8,
-      name: "Casual Linen Shirt",
-      price: 7500,
-      image: "/image/men-4.jpg",
-      rating: 4.0,
-      reviewCount: 39,
-      category: "men",
+  {
+    id: 5,
+    name: "Modern Ethiopian Suit",
+    price: 9500,
+    image: "/image/men-1.jpg",
+    rating: 4.7,
+    reviewCount: 2,
+    category: "men",
+  },
+  {
+    id: 6,
+    name: "White Traditional Shirt",
+    price: 4200,
+    image: "/image/men-2.jpg",
+    rating: 4.2,
+    reviewCount: 54,
+    category: "men",
+  },
+ 
+  {
+    id: 7,
+    name: "Embroidered habsha",
+    price: 11000,
+    image: "/image/men-3.jpg",
+    rating: 4.8,
+    reviewCount: 87,
+    category: "men",
+  },  
+  {
+    id: 8,
+    name: "Casual Linen Shirt",
+    price: 7500,
+    image: "/image/men-4.jpg",
+    rating: 4.0,
+    reviewCount: 39,
+    category: "men",
+  
+}]
+
+const FilterContent = () => (
+  <div className="space-y-3">
+  <div className="flex items-center space-x-2">
+  <Link to="/" className="font-medium text-gray-500">
+      HOME
+    </Link>
+    </div>
+    <div className="space-y-3">
+    <Link to="/women" className="font-medium text-gray-500">
+     WOMEN
+    </Link>
+    </div>
+    </div>
     
-  }
-
-]
-
-  const FilterContent = () => (
-    <div className="space-y-6">
-      <div>
-        <h3 className="font-medium mb-4">Category</h3>
-        <div className="space-y-3">
-          <div className="flex items-center space-x-2">
-          <Link to="/" className="font-medium text-gray-500">
-              HOME
-            </Link>
-            </div>
-            <div className="space-y-3">
-            <Link to="/men" className="font-medium text-gray-500">
-              MEN
-            </Link>
-            </div>
-            <div className="space-y-3">
-            <Link to="/women" className="font-medium text-gray-500">
-              WOMEN
-            </Link>
-           </div>
-          </div>
-         </div>
-        </div>
   )
 
   return (
@@ -120,12 +74,12 @@ const ProductListPage = () => {
       <h1 className="text-3xl font-bold mb-8">All Products</h1>
 
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Go to - for Mobile Toggle */}
+        {/* Go-to - Mobile Toggle */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" className="md:hidden flex items-center gap-2 mb-4">
               <Filter className="h-4 w-4" />
-             
+              
             </Button>
           </SheetTrigger>
           <SheetContent side="left">
@@ -134,7 +88,7 @@ const ProductListPage = () => {
           </SheetContent>
         </Sheet>
 
-        {/* Filters Sidebar */}
+        {/* Go-to Sidebar */}
         <div className="hidden md:block w-64 flex-shrink-0">
           <Card>
             <CardContent className="p-6">
@@ -143,8 +97,7 @@ const ProductListPage = () => {
             </CardContent>
           </Card>
         </div>
-
-     {/* Product Grid */}
+        {/* Product Grid */}
           {viewMode === "grid" ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {products.map((product) => (
@@ -173,7 +126,7 @@ const ProductListPage = () => {
                         </div>
                         <p className="font-bold mb-4">${product.price.toFixed(2)}</p>
                         
-                      
+                        
                       </div>
                     </div>
                   </CardContent>
@@ -185,6 +138,4 @@ const ProductListPage = () => {
     </div>
   )
 }
-
-export default ProductListPage
-
+export default men

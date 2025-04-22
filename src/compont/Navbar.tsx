@@ -42,7 +42,7 @@ const Navbar = () => {
             </Link>
             <Link to="/cart" aria-label="Cart" className="p-1 relative">
               <ShoppingBag size={20} />
-              {cartCount > 0 && (
+              {cartCount > 3 && (
                 <span className="absolute -top-1 -right-1 bg-black text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
                   {cartCount}
                 </span>

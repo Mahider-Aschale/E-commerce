@@ -1,5 +1,5 @@
 "use client"
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { Heart, ShoppingBag, Star, Minus, Plus } from "lucide-react"
@@ -12,13 +12,15 @@ import { Separator } from "../components/ui/separator"
 import { useToast } from "../hooks/use-toast"
 import BestSellers from "../compont/BestSellers"
 import { product} from "../../public/product"
+import { useCart } from "../compont/CartContext"
 
 export default function ProductDetailPage () {
-
   const { id } = useParams<{ id: string} >()
   const [selectedSize, setSelectedSize] = useState("")
   const [quantity, setQuantity] = useState(1)
-  const { toast } = useToast()
+  const { addToCart } = useCart()
+  const navigate = useNavigate();
+
 
   // Mock product data
   const products = product.find((p) => p.id === Number(id))
@@ -31,19 +33,17 @@ export default function ProductDetailPage () {
   const [mainImage, setMainImage] = useState(products.images[0])
   
   const handleAddToCart = () => {
-    if (!selectedSize) {
-      toast({
-        variant: "destructive",
-        title: "Please select a size",
-        description: "You must select a size before adding to cart",
+    addToCart({
+        id: products.id,
+        name: products.name,
+        price: products.price,
+        images: products.images,
+        size: selectedSize,
+        quantity,
       })
-      return
-    }
-
-    toast({
-      title: "Added to cart",
-      description: `${products.name} ( ${selectedSize}) has been added to your cart.`,
-    })}
+   
+    navigate("/cart");
+  }
   const decreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1)
@@ -76,7 +76,7 @@ export default function ProductDetailPage () {
                 />
               </Button>
             ))}
-          </div>ssss
+          </div>
         </div>
         {/* Product Details */}
         <div>
@@ -104,27 +104,19 @@ export default function ProductDetailPage () {
         
 
           {/* Size Selection */}
-          <div className="mb-6">
-            <div className="flex justify-between items-center mb-2">
-              <h3 className="font-medium">Size</h3>
-              <Button variant="link" className="p-0 h-auto">
-                Size Guide
-              </Button>
+          <RadioGroup value={selectedSize} onValueChange={setSelectedSize} className="grid grid-cols-4 gap-2">
+                    {products.sizes.map((size) => (
+            <div key={size}>
+         <RadioGroupItem value={size} id={`size-${size}`} className="peer sr-only" />
+           <Label
+             htmlFor={`size-${size}`}
+               className="flex h-10 w-full items-center justify-center rounded-md border border-muted bg-popover p-2 hover:bg-muted hover:text-muted-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground cursor-pointer">
+                 {size}
+          </Label>
             </div>
-            <RadioGroup value={selectedSize} onValueChange={setSelectedSize} className="grid grid-cols-4 gap-2">
-              {products.sizes.map((size) => (
-                <div key={size}>
-                  <RadioGroupItem value={size} id={`size-${size}`} className="peer sr-only" />
-                  <Label
-                    htmlFor={`size-${size}`}
-                    className="flex h-10 w-full items-center justify-center rounded-md border border-muted bg-popover p-2 hover:bg-muted hover:text-muted-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground"
-                  >
-                    {size}
-                  </Label>
-                </div>
-              ))}
-            </RadioGroup>
-          </div>
+                     ))}
+         </RadioGroup>
+
 
           {/* Quantity */}
           <div className="mb-6">
@@ -146,9 +138,7 @@ export default function ProductDetailPage () {
               <ShoppingBag className="h-4 w-4" />
               Add to Cart
             </Button>
-            <Button variant="outline" size="icon" className="h-12 w-12">
-              <Heart className="h-5 w-5" />
-            </Button>
+           
           </div>
 
           {/* Product Info Tabs */}

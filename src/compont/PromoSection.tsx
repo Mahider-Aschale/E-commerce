@@ -8,29 +8,26 @@ const PromoSection = () => {
           {/* Discount Promo */}
           <div className="bg-white p-6 flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-6 md:mb-0">
-              <img src="/image/bg-3.jpg" alt="Model wearing discounted items" className="w-full h-auto" />
+              <img src="/image/golden-bgg.jpg" alt="Model wearing discounted items" className="w-full h-auto" />
             </div>
             <div className="md:w-1/2 md:pl-8">
-              <h3 className="text-3xl font-bold mb-2 text-blue-600" >UP TO 30% DISCOUNT</h3>
-              <p className="text-gray-600 mb-4">For all sale items. Limited time offer.</p>
+              <h3 className="text-3xl font-bold mb-2 text-yellow-500" >UP TO 30% DISCOUNT</h3>
+              <p className="text-blue-600 mb-4">Top quality, fair price. Always.</p>
               <div className="flex space-x-2">
-                <Link to="/sale" className="btn btn-primary">
+                <Link to="/products" className="btn btn-primary">
                   SHOP
-                </Link>
-                <Link to="/sale/new" className="btn btn-outline">
-                  NEW
                 </Link>
               </div>
             </div>
           </div>
 
-          {/* Winter Collection Promo */}
+          {/* autumn Collection Promo */}
           <div className="relative overflow-hidden">
-            <img src="/image/bg-3.jpg" alt="Winter collection" className="w-full h-auto object-cover" />
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-8 text-white">
-              <h3 className="text-3xl font-bold mb-2">WINTER IN</h3>
-              <p className="mb-4">Discover our new winter collection</p>
-              <Link to="/winter-collection" className="btn btn-primary self-start">
+            <img src="/image/golden-bgg.jpg" alt="Winter collection" className="w-full h-auto " />
+            <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-8 text-yellow-500">
+              <h3 className="text-3xl font-bold mb-2">Fall into tradition—</h3>
+              <p className="mb-4">our autumn collection is here to warm your soul and your style</p>
+              <Link to="/autumncollection" className="btn btn-primary self-start text-yellow-500">
                 SHOP
               </Link>
             </div>

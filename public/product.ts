@@ -7,7 +7,7 @@ export const product = [
     description:
       "A fresh take on timeless beauty—this modern Habesha Kemis blends tradition with contemporary cuts.",
     sizes: ["S", "M", "L", "XL"],
-    rating: 4.1,
+    rating: 4.7,
     reviewCount: 131,
     images: ["/image/women-1.jpg"],
     features: [
@@ -19,9 +19,9 @@ export const product = [
   },
   {
     id: 2,
-    name: "Classic Abaya",
+    name: "Classic Habsha",
     price: 7200,
-    description: "Elegant black abaya with gold embroidery, perfect for formal occasions.",
+    description: "Elegant white abaya with gold embroidery, perfect for formal occasions.",
     sizes: ["S", "M", "L"],
     rating: 4.5,
     reviewCount: 98,
@@ -32,10 +32,44 @@ export const product = [
       "Lightweight & breathable",
     ],
   },
+  {
+    id: 3, 
+    name: "Elegant Habesha Kemis",
+    price: 8300,
+    description: "Traditional white Habesha Kemis with golden Tibeb accents—perfect for weddings and holidays.",
+    sizes: ["S", "M", "L"],
+    rating: 4.0,
+    reviewCount:89,
+    images: ["/image/women-3.jpg"],
+    features: [
+      "Handwoven Tibeb",
+      "100% cotton fabric",
+      "Ankle-length flowing design",
+      "Gold embroidered neckline"
+    ],
+  },
+  {
+    id: 4,
+    name: "Modern Habesha Kemis",
+    price: 8700,
+    description:  "A stylish twist on the classic Habesha Kemis with bold Tibeb and a fitted waistline.",
+    sizes: ["S", "M", "L"],
+    rating: 4.3,
+    reviewCount: 99,
+    images: ["/image/women-4.jpg"],
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },
+
+
 
   // Men Products
   {
-    id: 3,
+    id: 5,
     name: "Modern Ethiopian Suit",
     price: 9500,
     description: "Modern tailored suit with traditional Ethiopian touches for stylish gents.",
@@ -50,9 +84,9 @@ export const product = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     name: "White Traditional Shirt",
-    price: 4200,
+    price: 6900,
     description: "Classic Ethiopian white shirt with handwoven borders on sleeves and collar.",
     sizes: ["S", "M", "L", "XL"],
     rating: 4.2,
@@ -65,7 +99,7 @@ export const product = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     name: "Embroidered Kaba",
     price: 11000,
     description: "Royal-style men's Kaba with rich embroidery and elegant drape.",
@@ -80,7 +114,7 @@ export const product = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     name: "Casual Linen Shirt",
     price: 3800,
     description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
@@ -94,4 +128,139 @@ export const product = [
       "Subtle tibeb trim",
     ],
   },
+  {id: 9,
+    name: "golden habsha",
+    price: 5900,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images: ["/image/autumn-w1.jpg"],
+    rating:4.2,
+    reviewCount: 51,
+    category: "women",
+    features: [
+      "Linen blend",
+      "Soft collar",
+      "Subtle tibeb trim",
+    ],
+  },
+{
+    id: 10,
+    name: "golden addis",
+    price: 5200,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images:[ "/image/autumn-w2.jpg"],
+    rating: 4.0,
+    reviewCount:28,
+    category: "women",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  }, 
+  {
+    id: 11,
+    name: "gold habsha",
+    price: 6500,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images:[ "/image/autumn-w3.jpg"],
+    rating: 4.7,
+    reviewCount: 32,
+    category: "women", features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },
+  {
+    id: 12,
+    name: "auntum habsha",
+    price: 3900,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images: ["/image/autumn-w4.jpg"],
+    rating: 4.5,
+    reviewCount: 22,
+    category: "women",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },
+  {
+    id: 13,
+    name: "autumn ethiopian dress",
+    price: 5500,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images:[ "/image/autumn-w5.jpg"],
+    rating: 4.7,
+    reviewCount: 32,
+    category: "women",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },
+  {
+    id:14,
+    name: "gold Traditional Shirt",
+    price: 3400,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images: ["/image/autumn-m1.jpg"],
+    rating: 4.0,
+    reviewCount: 84,
+    category: "men",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },
+ 
+  {
+    id: 15,
+    name: "golden kaba",
+    price: 7000,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images:[ "/image/autumn-m2.jpg"],
+    rating: 4.2,
+    reviewCount: 84,
+    category: "men",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  },  
+  {
+    id: 16,
+    name: "Casual gold shirt",
+    price: 5500,
+    description: "Breathable casual shirt with minimal traditional designs—perfect for hot days.",
+    sizes: ["S", "M", "L"],
+    images:[ "/image/autumn-m3.jpg"],
+    rating: 4.0,
+    reviewCount: 29,
+    category: "men",
+    features: [
+      "Modern tailored fit",
+      "Colorful Tibeb trim",
+      "Soft cotton blend",
+      "Flared skirt design"
+    ],
+  
+}
 ]
