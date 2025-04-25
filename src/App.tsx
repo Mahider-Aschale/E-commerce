@@ -7,6 +7,7 @@ import ProductDetail from './pages/productDetail';
 import CartPage from './pages/cartPage'
 import CheckoutPage from './pages/checkout'
 import Autumn from './pages/autumn'
+import AccountPage from './pages/account'
 import './App.css'
 
 export default function App() {
@@ -21,7 +22,7 @@ return(
       <Route path="/women" element={<Women/>} /> 
       <Route path="/men" element={<Men/>}/>
       <Route path="/autumncollection" element={<Autumn/>}/>
-   
+      <Route path="/account" element={<AccountPage/>}/>
     </Routes>
      </>
 );
