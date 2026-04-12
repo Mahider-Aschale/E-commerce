@@ -7,7 +7,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-  <BrowserRouter> {/* Wrap your app here */}
+  <BrowserRouter>
   <CartProvider>
       <App />
     </CartProvider>
