@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Filter}  from "lucide-react"
-import ProductCard from "../compont/productCard"
+import ProductCard from "../component/productCard"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"

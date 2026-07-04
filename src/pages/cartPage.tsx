@@ -1,4 +1,4 @@
-import { useCart } from "../compont/CartContext"
+import { useCart } from "../component/CartContext"
 import { Minus, Plus, Trash } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom"

@@ -10,9 +10,9 @@ import { Label } from "../components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs"
 import { Separator } from "../components/ui/separator"
 import { useToast } from "../hooks/use-toast"
-import BestSellers from "../compont/BestSellers"
+import BestSellers from "../component/BestSellers"
 import { product} from "../../public/product"
-import { useCart } from "../compont/CartContext"
+import { useCart } from "../component/CartContext"
 
 export default function ProductDetailPage () {
   const { id } = useParams<{ id: string} >()

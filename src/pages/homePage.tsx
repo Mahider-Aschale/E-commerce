@@ -1,9 +1,9 @@
-import HeroSection from "@/compont/HeroSection"
-import BestSellers from "@/compont/BestSellers"
-import PromoSection from "@/compont/PromoSection"
-import Footer from "@/compont/Footer"
-import CategoryGrid from "@/compont/CategoryGrid"
-import Navbar from "@/compont/Navbar"
+import HeroSection from "@/component/HeroSection"
+import BestSellers from "@/component/BestSellers"
+import PromoSection from "@/component/PromoSection"
+import Footer from "@/component/Footer"
+import CategoryGrid from "@/component/CategoryGrid"
+import Navbar from "@/component/Navbar"
 const HomePage = () => {
   return (
     <div>
